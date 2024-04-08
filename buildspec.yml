@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+      nodejs: latest
+    commands:
+      - npm install -g yarn
+  pre_build:
+    commands:
+      - cd frontend
+      - yarn install
+  build:
+    commands:
+      - yarn build
+  post_build:
+    commands:
+      - aws s3 cp build/ s3://marlinsurf-artifacts/ --recursive
+artifacts:
+  files:
+    - '**/*'

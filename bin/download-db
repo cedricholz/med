@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# You have to add an inbound rule from your ip on aws for the rds security group for this to work.
+
+source ./.env
+set -e
+
+read -p "Does your database have a username and password? (y/n): " -n 1 -r
+
+echo "Starting Dump"
+#PGPASSWORD=$DATABASE_PASSWORD pg_dump -h $RDS_ENDPOINT -p 5432 -U 'postgres' -F c -b -v -f "latest.dump" $DATABASE_NAME
+
+echo "Starting Restore"
+psql << EOF
+REVOKE CONNECT ON DATABASE med FROM public;
+SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = 'med';
+
+DROP DATABASE IF EXISTS "med";
+CREATE DATABASE med;
+EOF
+
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  PGPASSWORD=$LOCAL_PASSWORD pg_restore -h localhost -p 5432 -U $LOCAL_USER_NAME -d med -v -F c "latest.dump"
+else
+  pg_restore -U '' -d med -v -F c "latest.dump"
+fi

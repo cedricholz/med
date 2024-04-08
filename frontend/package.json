@@ -1,0 +1,55 @@
+{
+  "name": "med",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mantine/core": "^7.7.1",
+    "@mantine/hooks": "^7.7.1",
+    "axios": "^1.6.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router": "^6.22.3",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "5.0.1",
+    "@reduxjs/toolkit": "^2.2.3",
+    "stylis": "^4.3.1",
+    "webpack-bundle-tracker": "^3.1.0",
+    "web-vitals":"3.5.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "react-scripts build && compress-cra",
+    "test": "craco test",
+    "eject": "craco eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/node": "^7.22.6",
+    "@babel/preset-env": "^7.22.6",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/register": "^7.22.5",
+    "@craco/craco": "^7.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "compress-create-react-app": "^1.4.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
+  }
+}

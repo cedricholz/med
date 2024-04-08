@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /staff/
+Disallow: /signin/
+Disallow: /custom-surfboard-order-staff/
+Disallow: /custom-surfboard-order-staff-preset/
+Sitemap: https://marlin.surf/sitemap.xml
