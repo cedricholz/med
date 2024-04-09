@@ -78,15 +78,15 @@ const Header = () => {
 
   return (
     <header className={"headerRoot"}>
-      <Container size="md">
-        <div className={"headerInner"}>
-          <MantineLogo size={28} />
-          <Group gap={5} visibleFrom="sm">
-            {items}
-          </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-        </div>
-      </Container>
+      {/*<Container size="md">*/}
+      <div className={"headerInner"}>
+        <MantineLogo size={28} />
+        <Group gap={5} visibleFrom="sm">
+          {items}
+        </Group>
+        <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+      </div>
+      {/*</Container>*/}
     </header>
   )
 }

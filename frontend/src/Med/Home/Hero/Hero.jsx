@@ -13,11 +13,15 @@ const Hero = () => {
         zIndex={0}
       />
       <Container className={"heroContainer"} size="md">
-        <div className={"heroTitle"}>Protocali: Medical Data Aggregator</div>
+        <div className={"heroTitle"}>
+          <span>Protocali</span>: Medical Data Aggregator
+        </div>
 
-        <Text className={"heroDescription"} size="xl" mt="xl">
-          Save time and money with Protocali. We provide a secure and easy way
-          to get your data in the format you need right away.
+        <Text size="xl" mt="xl">
+          <span className="heroDescription">
+            Save time and money with Protocali, the OCR last mile data
+            aggregator.
+          </span>
         </Text>
 
         <Button
