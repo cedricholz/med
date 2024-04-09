@@ -6,16 +6,31 @@ import reportWebVitals from "./reportWebVitals"
 import { BrowserRouter } from "react-router-dom"
 
 import { Provider } from "react-redux"
-
+import { localStorageColorSchemeManager } from "@mantine/core"
 import { store } from "./store"
+import { createTheme, MantineProvider } from "@mantine/core"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
+
+const theme = createTheme({
+  /** Put your mantine theme override here */
+})
 
 root.render(
   <BrowserRouter>
     <Provider store={store}>
       {/*<SoftUIControllerProvider>*/}
-      <App />
+      <MantineProvider
+        defaultColorScheme="auto"
+        colorSchemeManager={localStorageColorSchemeManager({
+          key: "mantine-ui-color-scheme",
+        })}
+        // theme={theme}
+        // withGlobalStyles
+        // withNormalizeCSS
+      >
+        <App />
+      </MantineProvider>
       {/*</SoftUIControllerProvider>*/}
     </Provider>
   </BrowserRouter>

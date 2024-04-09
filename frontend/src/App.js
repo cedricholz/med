@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react"
 // import CookieConsent from "react-cookie-consent"
 import AppRouter from "./AppRouter/AppRouter"
 // import Cookies from "js-cookie"
-
+import "@mantine/core/styles.css"
 // react-router components
 import { useLocation, useNavigate } from "react-router-dom"
 // @mui material components

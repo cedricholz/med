@@ -1,10 +1,19 @@
 import React from "react"
-import "./Home.css"
+import Hero from "./Hero/Hero"
+import FeaturesCards from "./FeaturesCards/FeaturesCards"
+import Stats from "./Stats/Stats"
+import Contact from "./Contact/Contact"
+import Footer from "./Footer/Footer"
 
 const Home = () => {
   return (
     <React.Fragment>
-      <div>Ayyyy its the home page</div>
+      <Hero />
+      {/*<Features />*/}
+      <Stats />
+      <FeaturesCards />
+      <Contact />
+      <Footer />
     </React.Fragment>
   )
 }

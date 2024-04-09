@@ -1,0 +1,89 @@
+.footerRoot {
+  margin-top: 7.5rem; /* 120px / 16 = 7.5rem */
+  padding-top: calc(var(--mantine-spacing-xl) * 2);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  border-top: 0.0625rem solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5)); /* 1px / 16 = 0.0625rem */
+}
+
+.footerLogo {
+  max-width: 12.5rem; /* 200px / 16 = 12.5rem */
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footerDescription {
+  margin-top: 0.3125rem; /* 5px / 16 = 0.3125rem */
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-top: var(--mantine-spacing-xs);
+    text-align: center;
+  }
+}
+
+.footerInner {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footerGroups {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    display: none;
+  }
+}
+
+.footerWrapper {
+  width: 10rem; /* 160px / 16 = 10rem */
+}
+
+.footerLink {
+  display: block;
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
+  font-size: var(--mantine-font-size-sm);
+  padding-top: 0.1875rem; /* 3px / 16 = 0.1875rem */
+  padding-bottom: 0.1875rem; /* 3px / 16 = 0.1875rem */
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footerTitle {
+  font-size: var(--mantine-font-size-lg);
+  font-weight: 700;
+  font-family: Greycliff CF, var(--mantine-font-family);
+  margin-bottom: calc(var(--mantine-spacing-xs) / 2);
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.footerAfterFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--mantine-spacing-xl);
+  padding-top: var(--mantine-spacing-xl);
+  padding-bottom: var(--mantine-spacing-xl);
+  border-top: 0.0625rem solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4)); /* 1px / 16 = 0.0625rem */
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+  }
+}
+
+.footerSocial {
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-top: var(--mantine-spacing-xs);
+  }
+}

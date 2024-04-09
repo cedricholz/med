@@ -1,0 +1,60 @@
+
+.hero {
+  position: relative;
+  /*background-image: url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);*/
+  background-image: url(https://cedricholz-assets.s3.us-east-2.amazonaws.com/GettyImages-1415099907.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.heroContainer {
+  height: 50rem; /* 700px / 16 = 43.75rem */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: calc(var(--mantine-spacing-xl) * 6);
+  z-index: 1;
+  position: relative;
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    height: 31.25rem; /* 500px / 16 = 31.25rem */
+    padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+  }
+}
+
+.heroTitle {
+  color: var(--mantine-color-white);
+  font-size: 3.75rem;
+  font-weight: 900;
+  line-height: 1.1;
+  /*align-items: flex-start;*/
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    font-size: 2.5rem; /* 40px / 16 = 2.5rem */
+    line-height: 1.2;
+  }
+
+  @media (max-width: var(--mantine-breakpoint-xs)) {
+    font-size: 1.75rem; /* 28px / 16 = 1.75rem */
+    line-height: 1.3;
+  }
+}
+
+.heroDescription {
+  color: var(--mantine-color-white);
+  max-width: 37.5rem; /* 600px / 16 = 37.5rem */
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    max-width: 100%;
+    font-size: var(--mantine-font-size-sm);
+  }
+}
+
+.heroControl {
+  margin-top: calc(var(--mantine-spacing-xl) * 1.5);
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    width: 100%;
+  }
+}

@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "@mantine/core": "^7.7.1",
+    "@mantine/form": "^7.7.1",
     "@mantine/hooks": "^7.7.1",
+    "@mantinex/mantine-logo": "^1.0.1",
+    "@reduxjs/toolkit": "^2.2.3",
+    "@tabler/icons-react": "^3.1.0",
     "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -12,10 +16,9 @@
     "react-router": "^6.22.3",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
-    "@reduxjs/toolkit": "^2.2.3",
     "stylis": "^4.3.1",
-    "webpack-bundle-tracker": "^3.1.0",
-    "web-vitals":"3.5.2"
+    "web-vitals": "3.5.2",
+    "webpack-bundle-tracker": "^3.1.0"
   },
   "scripts": {
     "start": "craco start",
