@@ -59,28 +59,35 @@ const FeaturesCards = () => {
   ))
 
   return (
-    <Container size="lg" py="xl">
-      <Group justify="center">
-        <Badge variant="filled" size="lg">
-          Best company ever
-        </Badge>
-      </Group>
+    <div
+      style={{
+        paddingTop: 40,
+      }}
+    >
+      <Container size="lg" py="xl">
+        <Group justify="center">
+          <Badge variant="filled" size="lg">
+            Best company ever
+          </Badge>
+        </Group>
 
-      <Title order={2} className={"featuresCardsTitle"} ta="center" mt="sm">
-        Integrate effortlessly with any technology stack
-      </Title>
+        <Title order={2} className={"featuresCardsTitle"} ta="center" mt="sm">
+          Integrate effortlessly with any technology stack
+        </Title>
 
-      <Text c="dimmed" ta="center" mt="md">
-        <div className="featuresCardsDescription">
-          Every once in a while, you’ll see a Golbat that’s missing some fangs.
-          This happens when hunger drives it to try biting a Steel-type Pokémon.
-        </div>
-      </Text>
+        <Text c="dimmed" ta="center" mt="md">
+          <div className="featuresCardsDescription">
+            Every once in a while, you’ll see a Golbat that’s missing some
+            fangs. This happens when hunger drives it to try biting a Steel-type
+            Pokémon.
+          </div>
+        </Text>
 
-      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
-        {features}
-      </SimpleGrid>
-    </Container>
+        <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
+          {features}
+        </SimpleGrid>
+      </Container>
+    </div>
   )
 }
 

@@ -68,12 +68,10 @@ const Contact = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // height: "100vh",
-        paddingTop: 30,
-        paddingBottom: 30,
+        paddingTop: 40,
       }}
     >
-      <div style={{ maxWidth: "50%", width: "100%", margin: "0 auto" }}>
+      <div style={{ maxWidth: "60%", width: "100%", margin: "0 auto" }}>
         {/* Adjust the maxWidth as needed */}
         <form onSubmit={form.onSubmit((values) => console.log(values))}>
           <Title
